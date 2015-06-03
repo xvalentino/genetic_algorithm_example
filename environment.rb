@@ -79,7 +79,7 @@ class Environment
     one_fit = fitness(parent_one) 
     two_fit = fitness(parent_two) 
     parent_one.value.zip(parent_two.value).map do |chromo_one, chromo_two|
-      random = Random.rand(0..9) 
+      random = Random.rand(2..12) 
       if (one_fit - random).abs < (two_fit - random).abs
         chromo_one
       elsif one_fit == two_fit
